@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Concrete Manifesto</title> 
+        <!--
+
+        Superflux: Manifesto (2021)
+        We are more than human. We know where we are.
+
+
+        My idea for this design was that as humans we are easily influcenced by others. I personally also feel as though I am also always trying to find my own place in the world. My design reflects that we sometimes "fall off" as indicated by the first line of text, and influcenced/shaped by others, as indicated by the third line of text.
+
+    -->  
+
+    <style type="text/css">
+        div h1{
+            position: relative;
+            top: -120px;
+            font-size: 200px;
+            margin-left: 12rem;
+            margin-top: 0rem;
+        }
+        div p1{
+            position: relative;
+            top: 200px;
+            text-align: center;
+            font-size: 70px;
+            margin-left: 10rem;
+            margin-top: 0rem;
+        }
+        div p2{
+            position: relative;
+            top: -310px;
+            font-size: 70px;
+            margin-left: 31rem;
+            margin-top: 0rem;
+        }
+    </style>
+</head>
+<body id = "body" style= "background-color: white;">
+    <div>
+        <p1><span id = "p1" style= "display: inline-block; transform: rotate(-15deg); position: relative; top: 25px;">We a</span>
+
+            <span id = "p1.2">re more than</span></p>
+        <h1><span id= "h1" style="color: red;">HUMA</span><span id= "clickable" onclick="myFunction()" style= "color: red; display: inline-block; transform: rotate(15deg);cursor: pointer;">N</span><span id = "h1.2" style="color: black;">.</span></h1>
+        <p2><span id = "p2" >We know where</span> <span id = "p2.2" style= "display: inline-block; transform: rotate(15deg);">we</span>&nbsp;<span id="p2.3">are.</span></p>
+    </div>
+<script>
+    document.getElementById("clickable").addEventListener("mouseover", mouseOver);
+document.getElementById("clickable").addEventListener("mouseout", mouseOut);
+
+function mouseOver() {
+  document.getElementById("clickable").style.color = "teal";}
+
+function mouseOut() {
+  document.getElementById("p1").style.color = "black";
+  document.getElementById("p1.2").style.color = "black";
+  document.getElementById("h1").style.color = "red";
+  document.getElementById("clickable").style.color = "red";
+  document.getElementById("h1.2").style.color = "black";
+  document.getElementById("p2").style.color = "black";
+  document.getElementById("p2.2").style.color = "black";
+  document.getElementById("p2.3").style.color = "black";
+document.getElementsByTagName("BODY")[0].style.backgroundColor = "white";
+}
+
+function myFunction() {
+  document.getElementById("p1").style.color = "white";
+  document.getElementById("p1.2").style.color = "white";
+  document.getElementById("h1").style.color = "teal";
+  document.getElementById("clickable").style.color = "teal";
+  document.getElementById("h1.2").style.color = "white";
+  document.getElementById("p2").style.color = "white";
+  document.getElementById("p2.2").style.color = "white";
+  document.getElementById("p2.3").style.color = "white";
+document.getElementsByTagName("BODY")[0].style.backgroundColor = "black";
+}
+
+</script>
+</body>
+</html> 
+
+
+
+
+
