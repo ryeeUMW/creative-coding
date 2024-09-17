@@ -7,11 +7,32 @@
 
     <title>My Self Portrait</title> 
     <!--
-        Use this page to complete the "Data Self Portrait" project:
-        https://canvas.umw.edu/courses/1499064/assignments/11895984
+        I chose to use my name to make quantitive data about myself. each letter of my name has a hobby, a thing i enjoy, and things about me that can be counted and are running counts. Once finished hovering over each letter of my name, hover over the current year to see a photo of me and some friends from this year!
     -->  
 
     <style type="text/css">
+        div p3{
+            position: relative;
+            top: 120px;
+            text-align: center;
+            font-size: 60px;
+            margin-left: 16rem;
+            margin-top: 0rem;
+        }
+        div h1{
+            position: relative;
+            top: 100px;
+            text-align: center;
+            margin-left: 0rem;
+            margin-top: 0rem;
+        }
+        div p4{
+            position: relative;
+            top: 80px;
+            font-size: 45px;
+            margin-left: 17rem;
+            margin-top: 0rem;   
+        }
 
 
 
@@ -19,7 +40,141 @@
 
 </head>
 <body>
+    <div id="all">
+        <p3>
+            <pR class="pRu" style="writing-mode: vertical-lr; text-orientation: upright; color: white;">
+                <span id="pRu">256</span>
+            </pR>&nbsp;
+            <pE1 class="pE1u" style="writing-mode: vertical-lr; text-orientation: upright;color: white;">
+                <span id="pE1u">13</span>
+            </pE1>&nbsp;
+            <pB class="pBu" style="writing-mode: vertical-lr; text-orientation: upright;color: white;">
+                <span id="pBu">37</span>
+            </pB>&hairsp;
+            <pE2 class="pE2u" style="writing-mode: vertical-lr; text-orientation: upright;color: white;">
+                <span id="pE2u">112</span>
+            </pE2>&nbsp;
+            <pC1 class="pC1u" style="writing-mode: vertical-lr; text-orientation: upright;color: white;">
+                <span id="pC1u">10</span>
+            </pC1>&nbsp;
+            <pC2 class="pC2u" style="writing-mode: vertical-lr; text-orientation: upright;color: white;">
+                <span id="pC2u">200</span>
+            </pC2>&hairsp;  
+            <pA class="pAu" style="writing-mode: vertical-lr; text-orientation: upright;color: white;">
+                <span id="pAu">3</span>
+            </pA>
+        </p3>
+        <h1>
+            <span id="R" style="font-size: 100px;">R</span>&nbsp;&nbsp;&nbsp;<span id="E1" style="font-size: 100px;">E</span>&nbsp;&nbsp;&nbsp;<span id="B" style="font-size: 100px;">B</span>&nbsp;&nbsp;&nbsp;<span id="E2" style="font-size: 100px;">E</span>&nbsp;&nbsp;&nbsp;<span id="C1" style="font-size: 100px;">C</span>&nbsp;&nbsp;&nbsp;<span id="C2" style="font-size: 100px;">C</span>&nbsp;&nbsp;&nbsp;<span id="A" style="font-size: 100px;">A</span>&nbsp;
+
+            <span id="clickable" onclick="show()" style="font-size: 30px; cursor: pointer;">2 0 2 4</span>
+        </h1>
+        <p4>
+            <pRd class="pRd" style="writing-mode: vertical-lr; text-orientation: upright; vertical-align: text-top;color: white;">
+                <span id="songs">eplayed songs</span>
+            </pRd>&nbsp;&nbsp;&nbsp;
+            <pE1d class="pE1d" style="writing-mode: vertical-lr; text-orientation: upright; vertical-align: text-top;color: white;">
+                <span id="piercings">ar piercings</span>
+            </pE1d>&nbsp;&nbsp;&nbsp;
+            <pBd class="pBd" style="writing-mode: vertical-lr; text-orientation: upright;vertical-align: text-top;color: white;">
+                <span id="books">ooks read</span>
+            </pBd>&nbsp;&nbsp;
+            <pE2d class="pE2d" style="writing-mode: vertical-lr; text-orientation: upright;vertical-align: text-top;color: white;">
+                <span id="shows">pisodes seen</span>
+            </pE2d>&nbsp;&nbsp;&nbsp;
+            <pC1d class="pC1d" style="writing-mode: vertical-lr; text-orientation: upright;vertical-align: text-top;color: white;">
+                <span id="yarn">rochet works</span>
+            </pC1d>&nbsp;&nbsp;&nbsp; 
+            <pC2d class="pC2d" style="writing-mode: vertical-lr; text-orientation: upright;vertical-align: text-top;color: white;">
+                <span id="cups">ups of coffee</span>
+            </pC2d>&nbsp;&nbsp;&hairsp;   
+            <pAd class="pAd" style="writing-mode: vertical-lr; text-orientation: upright;vertical-align: text-top;color: white;">
+                <span id="dogs">nimal friends</span>
+            </pAd>
+        </p4>
+    </div>
+    <img id="image" style="visibility: hidden;" src="https://i.imgur.com/JGPu1mv.jpeg"/>
+    <script type="text/javascript">
+        document.getElementById("R").addEventListener("mouseover", mouseOver1);
+        document.getElementById("R").addEventListener("mouseout", mouseOut1);
+        document.getElementById("E1").addEventListener("mouseover", mouseOver2);
+        document.getElementById("E1").addEventListener("mouseout", mouseOut2);
+        document.getElementById("B").addEventListener("mouseover", mouseOver3);
+        document.getElementById("B").addEventListener("mouseout", mouseOut3);
+        document.getElementById("E2").addEventListener("mouseover", mouseOver4);
+        document.getElementById("E2").addEventListener("mouseout", mouseOut4);
+        document.getElementById("C1").addEventListener("mouseover", mouseOver5);
+        document.getElementById("C1").addEventListener("mouseout", mouseOut5);
+        document.getElementById("C2").addEventListener("mouseover", mouseOver6);
+        document.getElementById("C2").addEventListener("mouseout", mouseOut6);
+        document.getElementById("A").addEventListener("mouseover", mouseOver7);
+        document.getElementById("A").addEventListener("mouseout", mouseOut7);
+        document.getElementById("clickable").addEventListener("mouseover", mouseOn);
+        document.getElementById("clickable").addEventListener("mouseout", mouseOff);
+
+        function mouseOver1() {
+            document.getElementById("pRu").style.color = "red";
+            document.getElementById("songs").style.color = "red";}
+        function mouseOut1() {
+            document.getElementById("pRu").style.color = "white";
+            document.getElementById("songs").style.color = "white";}
+
+        function mouseOver2() {
+            document.getElementById("pE1u").style.color = "orange";
+            document.getElementById("piercings").style.color = "orange";}
+        function mouseOut2() {
+            document.getElementById("pE1u").style.color = "white";
+            document.getElementById("piercings").style.color = "white";}
+
+        function mouseOver3() {
+            document.getElementById("pBu").style.color = "gold";
+            document.getElementById("books").style.color = "gold";}
+        function mouseOut3() {
+            document.getElementById("pBu").style.color = "white";
+            document.getElementById("books").style.color = "white";}
+
+        function mouseOver4() {
+            document.getElementById("pE2u").style.color = "green";
+            document.getElementById("shows").style.color = "green";}
+        function mouseOut4() {
+            document.getElementById("pE2u").style.color = "white";
+            document.getElementById("shows").style.color = "white";}
+
+        function mouseOver5() {
+            document.getElementById("pC1u").style.color = "blue";
+            document.getElementById("yarn").style.color = "blue";}
+        function mouseOut5() {
+            document.getElementById("pC1u").style.color = "white";
+            document.getElementById("yarn").style.color = "white";}
+
+        function mouseOver6() {
+            document.getElementById("pC2u").style.color = "purple";
+            document.getElementById("cups").style.color = "purple";}
+        function mouseOut6() {
+            document.getElementById("pC2u").style.color = "white";
+            document.getElementById("cups").style.color = "white";}
+
+        function mouseOver7() {
+            document.getElementById("pAu").style.color = "hotpink";
+            document.getElementById("dogs").style.color = "hotpink";}
+        function mouseOut7() {
+            document.getElementById("pAu").style.color = "white";
+            document.getElementById("dogs").style.color = "white";}
+
+        function mouseOn() {
+            document.getElementById("clickable").style.color = "pink";}
+        function mouseOff() {
+            document.getElementById("clickable").style.color = "black";}
+
+        function show() {
+            document.getElementById("image").style.visibility = "visible";
+            document.getElementById("clickable").style.display = "none";
+            document.getElementById("all").style.display = "none";
+        }
+        
+    </script>
 
 
 </body>
+
 </html> 
