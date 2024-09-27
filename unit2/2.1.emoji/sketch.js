@@ -6,6 +6,12 @@ function setup() {
   noLoop();
 }
 
+//I chose to create the upsidedown smiling emoji. https://emojipedia.org/upside-down-face
+//I started with the circle code provided in canvas and continued using that for the eyes. 
+//I then went to https://p5js.org/reference/p5/arc/ and this youtube video 
+//https://www.youtube.com/watch?app=desktop&v=IWLpIJMVRtg&t=15 to help explain how 
+//I can make the arc and position it where I want it
+
 function draw() {
   background(220);
 
@@ -34,7 +40,6 @@ function draw() {
 
   arc(200, 210, 160,160,radians(210),radians(330));
   stroke("brown");
-
 
   rectMode(CENTER);
  
