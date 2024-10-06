@@ -17,7 +17,7 @@ function draw() {
       push();
       translate(x * 120, y * 120);
       fill(random(255), random(0), random(150), random(0,255)); //random fill colors
-      stroke(random(255), random(0), random(255), random(255)); //random stroke colors
+      stroke(random(255), random(0), random(255), 50); //random stroke colors
       strokeWeight(random(3,10)); //random stroke weight
       ellipse(0,0,(random(20,240))); //random size of circles
       pop();
@@ -25,7 +25,7 @@ function draw() {
       push();
       translate(x * 120, y * 120);
       fill(random(255), random(0), random(150), random(0,255)); //random fill colors
-      stroke(random(255), random(0), random(255), random(255)); //random stroke colors
+      stroke(random(255), random(0), random(255), 50); //random stroke colors
       strokeWeight(random(3,10)); //random stroke weight
       rect(0,0,(random(20,255))); //random size of circles
       pop();
