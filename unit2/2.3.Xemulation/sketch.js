@@ -1,6 +1,7 @@
 function setup() {
   // create the canvas
-  createCanvas(900,1200);
+  createCanvas(900,700);
+
 
   // disable animation
   noLoop();
@@ -11,6 +12,10 @@ function setup() {
 //that this was something I could emulate with code. I decided to make the recatngles move
 //up and down randomly so it changes everytime you refresh it because there was no
 //apparent pattern to how the rectangles were positiioned.
+
+//For the iteration I decided to make it interactive by letting the user click on the screen and it allows for the page to refresh per say
+//I also wanted to make it look more like its artwork that is on paper, so I am going to make the texture of the canvas more grainy than flat
+//to give the illution of it being on a paper canvas.
 
 function draw() {
 
@@ -45,7 +50,6 @@ function draw() {
     rect(25,(random(0,70)),18,120); 
     pop();
     }
-
 }
 
 function mouseClicked(){

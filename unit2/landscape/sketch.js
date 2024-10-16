@@ -1,6 +1,6 @@
 function preload(){
   // load the image from a file
-	img = loadImage();
+	img = loadImage('/Users/a2190/Documents/GitHub/creative-coding/unit2/landscape/DUKE_N_DALLAS!!!!.jpg');
 }
 
 function setup() {
