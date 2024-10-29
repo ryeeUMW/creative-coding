@@ -1,7 +1,3 @@
-// function preload(){
-//   // load the image from a file
-//   img = createImage('/Users/a2190/Documents/GitHub/creative-coding/unit3/3.2.follower/ratfollower.gif');
-// }
 
 let debug = false;
 let speedfactor = 3;
