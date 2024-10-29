@@ -1,29 +1,39 @@
 
-let debug = false;
-let speedfactor = 3;
+let sprite;
+let debug = false;//when assigned true I can test that mouseX and mouseY work
+let speedfactor = 3; //the speed of the sprite
 let xspeed = speedfactor;
 let yspeed = speedfactor;
-let x=0; 
+let x=0; //sprite spawn
 let y=0;
 let d=0;
+
+function preload() {
+   sprite = loadImage('https://ryeeumw.github.io/creative-coding/unit3/3.2.follower/ratfollower.gif');
+}
 
 function setup() {
   createCanvas(800, 800);
 
-x = random(width);
+x = random(width); //spawning the sprite in a random point on the canvas
 y = random(height);
 }
 
+//draw canvas
 function draw() {
-  background(220);
+  background(10);
 
+//distance formula
 d = sqrt((x - mouseX)**2 + (y - mouseY)**2);
 
 x += xspeed;
 y += yspeed;
 
-circle(x,y,50);
+//drawing an image to follow the mouse
+image(sprite,x,y,50,50);
+// circle(x,y,50);
 
+//having the sprtie follow the mouse
 if (mouseX > x){
    xspeed = speedfactor;
 }
@@ -39,8 +49,8 @@ else{
    yspeed = -speedfactor;
 }
 
+//respawning sprite when it hits the mouse
 if (d < 25){
-   fill(random(10,250),random(10,250),random(10,250),255);
    x = random(width);
    y = random(height);
   }
@@ -54,5 +64,3 @@ if (debug){
    text("d: " + d, 50,180);
    }
 }
-
- // image(img,xspeed,yspeed,10,10);}
