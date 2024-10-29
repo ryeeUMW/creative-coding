@@ -8,7 +8,7 @@ let ripplers = [];
   constructor(x,y) {
     this.x = x,
     this.y = y,
-    this.diameter = 0
+    this.d = 0
   }
   update() {
     this.d += 1;
