@@ -1,6 +1,5 @@
 
 let sprite;
-let mouse;
 let debug = false;//when assigned true I can test that mouseX and mouseY work
 let speedfactor = 2; //the speed of the sprite
 let xspeed = speedfactor;
@@ -11,7 +10,6 @@ let d=0;
 
 function preload() {
    sprite = loadImage('https://ryeeumw.github.io/creative-coding/unit3/3.2.follower/ratfollower.gif');
-   mouse = loadImage('https://ryeeumw.github.io/creative-coding/unit3/3.2.follower/High-quality-cheese.png');
 }
 
 function setup() {
@@ -29,7 +27,7 @@ function draw() {
 
 //cursor(mouse);
 
-cursor('https://ryeeumw.github.io/creative-coding/unit3/3.2.follower/High-quality-cheese%20(1).png');
+cursor('https://ryeeumw.github.io/creative-coding/unit3/3.2.follower/pixel_art%20(1).png');
 
 //distance formula
 d = sqrt((x - mouseX)**2 + (y - mouseY)**2);
