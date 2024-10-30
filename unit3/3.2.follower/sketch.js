@@ -29,7 +29,7 @@ function draw() {
 
 //cursor(mouse);
 
-cursor('https://ryeeumw.github.io/creative-coding/unit3/3.2.follower/ratfollower.gif');
+cursor('https://ryeeumw.github.io/creative-coding/unit3/3.2.follower/High-quality-cheese%20(1).png');
 
 //distance formula
 d = sqrt((x - mouseX)**2 + (y - mouseY)**2);
