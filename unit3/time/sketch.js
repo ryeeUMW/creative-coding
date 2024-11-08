@@ -23,11 +23,4 @@ function clock() {
   stroke('yellow');
   strokeWeight(4);
   circle(200, y, 100); //setting the x coordinate to be at the center of the canvas, the y coordinate is mapped to move aat the current time
-
-  if (noon = true);{ //if the sun hits noon at the center of the canvas the background should change a yellow for a second
-    background(60,60,0,255);
   }
-  else();{ //then goes back to the black for the rest of the times.
-    background (10);
-  }
-}
