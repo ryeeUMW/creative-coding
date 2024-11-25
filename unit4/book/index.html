@@ -31,6 +31,13 @@
         background-color: black;
         color: pink;
         margin: 10mm 20mm;
+        @bottom-right-corner {
+          vertical-align: center;
+          text-align: center;
+          background: black;
+          color: white;
+          content: "P. " counter(page);
+      }
     }
     h2 { /*to create a new page every new "chapter" */
         break-before: page;

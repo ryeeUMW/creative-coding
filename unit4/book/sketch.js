@@ -1,6 +1,7 @@
 
 let word = "here";
 let wc = 0;
+let end = "The End"
 
 function setup() {
 
@@ -38,7 +39,6 @@ function setup() {
       }
       content.child(createElement("p",paragraph));
     }
-    
   
     
   }
