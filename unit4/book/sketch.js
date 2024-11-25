@@ -1,49 +1,47 @@
-let lines, fullText, mv,c,wc;
 
-function preload() {
-  lines = loadStrings("https://ryeeUMW.github.io/creative-coding/week4/book/example-markov/alice.txt");
-}
+let word = "here";
+let wc = 0;
 
 function setup() {
-  noCanvas();
-  
-  // the base container for the book
-  let content = createElement("div");
-  content.attribute("id","content");
 
-  // build the markov model
-  // see options at: https://rednoise.org/rita/reference/RiTa/markov/index.html 
-  mv = RiTa.markov(2, {'disableInputChecks': true, 'temperature': 100, 'maxAttempts': 9999});
-  mv.addText(lines.join(" "));
+  // We won't need any canvas
+  noCanvas();
+
+ 
+  let content = select("body");
+  content.attribute("id","content");
   
-  // creates a title for the book by generating a sentence
-  content.child(createElement("h1", mv.generate(1)));
+  content.child(createElement("h1","I'm " + word));
   
   
-  c = 1;
-  do {
+  // make a sentence
+  
+  while( wc < 50000){
+    content.child(createElement("h2",String(word.charAt(0).toUpperCase() +word.slice(1)+" ").repeat(random(2,6))));
     
-    // create chapter titles from single sentences.
-    content.child( createElement("h2","Chapter " + c + ": " + mv.generate(1)));
-    let newText = "";
-    // use random() to specify the minimum and maximum
-    // paragraphs per chapter
-    for (let p = 0; p < random(12,60); p++ ){
-     
-      // generate a random number of sentences, using
-      // random() to dictate min and max sentences
-      let sentGen = mv.generate(floor(random(1,7)));
-      
-      let sentences = (typeof sentGen == 'object') ? sentGen.join(" ") : sentGen;
-            newText += "<p>" + sentences  + "</p>";   
+    for (let p = 0; p < random(5,20); p++){
+      let paragraph = '';
+      for (let s = 0; s < random(3,20); s++){
+        let internalPunct = [",",",",",",";"," --","..."];
+        let endPunct = [".",".","?","!"];
+        let sentence = word.charAt(0).toUpperCase() + word.slice(1);
+        let sentenceLength = random(9,25);
+        wc += sentenceLength + 1;
+        for (let w = 0; w < sentenceLength; w++){
+          sentence += " " + word;
+          if (random() < 0.2){
+            sentence += random(internalPunct);
+          }
+        }
+        sentence += random(endPunct) + " ";
+        paragraph += sentence;
+      }
+      content.child(createElement("p",paragraph));
     }
-    content.child(createElement("div", newText));
-   
-    c++;
-  }
-  while (c < 5); // the number of chapters to generate.
     
-  // call the polyfill rendering
-  window.PagedPolyfill.preview();
   
+    
+  }
+  
+ window.PagedPolyfill.preview();
 }
