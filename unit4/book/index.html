@@ -24,6 +24,11 @@
 
 <!-- styling the pages and text -->
     <style type="text/css"> 
+
+    body {
+        counter-reset: countChapter;
+    }
+
     @page { /*styling the page size, color, text color and font, and margin size */
         size: A7;
         font-style: italic;
@@ -36,15 +41,22 @@
           text-align: center;
           font-size: 12px;
           background: black;
-          color: white;
+          color: lightblue;
           content: counter(page);
       }
     }
-    h2 { /*to create a new page every new "chapter" */
-        break-before: page;
+
+    h1 {
+        font-size: 70px;
     }
-    h2 {
-        break-after: page;
+    h2 { /*to create a new page every new "chapter" */
+        break-before: right;
+        counter-increment: countChapter;
+    }
+
+    h2::before {
+        color: lightblue;
+        content: "Chapter " counter(countChapter) " ";
     }
       
     </style>
