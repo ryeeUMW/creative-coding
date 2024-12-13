@@ -1,3 +1,7 @@
+
+//made from the grid assignment i created the eye doctor chart. Every time you press your mouse the screen goes black
+//as if your blinking or the lenses are being switched and then when you rleased your mouse the letter changes.
+
 function setup() {
   // create a canvas
   createCanvas(1200, 1200);

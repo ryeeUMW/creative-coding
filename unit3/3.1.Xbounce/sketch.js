@@ -63,7 +63,6 @@ function draw() {
   // y = y + yspeed; // iterate y
   }
   function mousePressed(){//making the circle change color and stroke weight when the mouse is pressed
-    bouncers[r].update();
     fill(random(10,250),random(10,250),random(10,250),255);
     strokeWeight(random(1,10));
   }
